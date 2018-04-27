@@ -1,0 +1,46 @@
+create database bps;
+
+use bps;
+
+
+create country table
+--------------------
+
+create table country(conId int(20) primary key not null,conName varchar(20));
+
+
+create state table
+--------------------
+
+CREATE TABLE state (
+  stateId     int(20) primary key not null, 
+  stateName   varchar(20), 
+  conId int(20),
+  FOREIGN KEY(conId) REFERENCES country(conId)
+);
+
+
+
+create vendor-type table
+-------------------------
+
+create table vendor_type(typeId int(20) primary key not null,typeName varchar(20));
+
+
+
+create vendor table
+--------------------
+
+create table vendor(vendorName varchar(20),regNo int(30) primary key not null ,vendorTypeId int(20),address varchar(50),country varchar(20),state varchar(20),email varchar(20),contactNo int(20),website varchar(100),certIssuedDate datetime,certValidityDate datetime,empCount int(20),custCount int(20),estYear int(20),FOREIGN KEY(vendorTypeId) REFERENCES vendor_type(typeId));
+
+
+
+
+
+
+
+
+
+
+
+
