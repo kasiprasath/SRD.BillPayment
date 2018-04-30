@@ -105,11 +105,6 @@ public class Customer {
 	public void setCardNumber(long cardNumber) {
 		this.cardNumber = cardNumber;
 	}
-	public float getBalence() {
-		return balence;
-	}
-	public void setBalence(float balence) {
-		this.balence = balence;
-	}
+	
 	
 }
