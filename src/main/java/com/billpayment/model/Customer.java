@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Customer {
 	
 	@Id
-	private int custmoerId;
+	private int customerId;
 	private String cName;
 	private String cAdress;
 	private long cContactNo;
@@ -23,14 +23,21 @@ public class Customer {
 	private Date   cRegistrationDate;
 	private String typeOfvender;
 	private long cardNumber;
-	private float balence;
+	private float balance;
 
 	
-	public int getCustmoerId() {
-		return custmoerId;
+
+	public int getCustomerId() {
+		return customerId;
 	}
-	public void setCustmoerId(int custmoerId) {
-		this.custmoerId = custmoerId;
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+	public float getBalance() {
+		return balance;
+	}
+	public void setBalance(float balance) {
+		this.balance = balance;
 	}
 	public String getcName() {
 		return cName;
