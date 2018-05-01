@@ -18,7 +18,7 @@ import com.srd.billpayment.srdBillpayment.service.CustomerService;
 public class CustomerController {
 	@Autowired
 	CustomerRepo repo;
-	
+	CustomerService service;
 	
 	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
@@ -27,6 +27,15 @@ public class CustomerController {
 		repo.save(customer);
 		return new ResponseEntity<String>("succes",HttpStatus.OK);
 		
+	/*	ResponseEntity<String> response=service.addCustomer(customer);
+		
+		return response;*/
+	}
+	
+	@RequestMapping(value="/update", method=RequestMethod.GET)
+	public ResponseEntity<String> updateCustomer()
+	{
+		return new ResponseEntity<String>("succes",HttpStatus.OK);
 	}
 	
 	

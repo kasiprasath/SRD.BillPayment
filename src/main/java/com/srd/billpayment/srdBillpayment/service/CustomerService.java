@@ -10,14 +10,15 @@ import com.srd.billpayment.srdBillpayment.entity.Customer;
 @Service
 public class CustomerService {
 	/*@Autowired
-	ResponseEntity<String > response;
+	ResponseEntity<String > response;*/
 	@Autowired
 	CustomerDao custmerDao;
 	
 	
 	public ResponseEntity<String > addCustomer(Customer customer)
 	{
-		response=custmerDao.addCustomer(customer);
+		ResponseEntity<String> response=custmerDao.addCustomer(customer);
+		
 		return response;
-	}*/
+	}
 }

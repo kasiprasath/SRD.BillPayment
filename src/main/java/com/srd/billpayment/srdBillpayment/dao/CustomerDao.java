@@ -10,13 +10,13 @@ import com.srd.billpayment.srdBillpayment.entity.Customer;
 
 @Repository
 public class CustomerDao {
-	/*ResponseEntity<String > response;
+	ResponseEntity<String > response;
 	@Autowired
 	CustomerRepo repo;
 	
-	public ResponseEntity<String> addCustomer(@RequestBody Customer customer){
+	public ResponseEntity<String> addCustomer(Customer customer){
 		repo.save(customer);
 	ResponseEntity<String > response=	new ResponseEntity<String>("saved successfully",HttpStatus.OK);
 		return response;
-	}*/
+	}
 }
