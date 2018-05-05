@@ -9,8 +9,7 @@ import com.srd.billpayment.srdBillpayment.entity.Customer;
 
 @Service
 public class CustomerService {
-	/*@Autowired
-	ResponseEntity<String > response;*/
+	
 	@Autowired
 	CustomerDao custmerDao;
 	

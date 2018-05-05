@@ -10,7 +10,6 @@ import com.srd.billpayment.srdBillpayment.entity.Customer;
 
 @Repository
 public class CustomerDao {
-	ResponseEntity<String > response;
 	@Autowired
 	CustomerRepo repo;
 	
