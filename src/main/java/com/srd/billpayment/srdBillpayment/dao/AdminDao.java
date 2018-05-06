@@ -2,7 +2,9 @@ package com.srd.billpayment.srdBillpayment.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -30,22 +32,16 @@ SessionFactory session;
 	 Session sess=session.openSession();
 	 Transaction tran = sess.getTransaction();
 	 tran.begin();
-	ResultSet set= (ResultSet) sess.createQuery("select * from admin where name="+admin.getName()+"and password="+admin.getPassword());
-	try {
-		if (set.next())
-		{
-			return "ok";
-		}
-		else
-		{
-			return "fail";
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+	Query set = sess.createQuery("from Admin where name='"+admin.getName()+"' and password='"+admin.getPassword()+"'");
+	List str = set.list();
+	if (str.size()>0)
+	{
+		return "ok admin is there";
 	}
-	 tran.commit();
-	return "ok";
+	else
+	{
+		return "fail";
+	}
 	 
  }
 }
